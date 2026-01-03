@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Word Speaker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <h1>Word Speaker</h1>
+        </header>
+
+        <div class="controls">
+            <label for="url">Words file URL</label>
+            <input id="url" type="url"
+                value="https://gist.githubusercontent.com/saurabhv749/da15dc6781a6bae210c0f3b699c859db/raw/989f90576c0a6ca38a093edabf425b641da21a7b/common_words.txt"
+                placeholder="https://example.com/common_words.txt">
+
+            <button id="load">Load</button>
+
+            <label for="voice">Voice</label>
+            <select id="voice"></select>
+            <div class="voice-controls">
+                <div class="input">
+
+                    <label for="rate">Rate</label>
+                    <input id="rate" type="range" min="0.5" max="2" step="0.1" value="1">
+                </div>
+
+                <div class="input">
+                    <label for="pitch">Pitch</label>
+                    <input id="pitch" type="range" min="0" max="2" step="0.1" value="1">
+                </div>
+            </div>
+        </div>
+
+        <div id="status" class="status">Enter a URL and click Load.</div>
+        <div id="words" class="words-grid" aria-live="polite"></div>
+
+        <footer>
+            <small>Click a word to hear it (uses your browser/system TTS via Web Speech API).</small>
+        </footer>
+
+        <script src="main.js"></script>
+    </div>
+</body>
+
+</html>

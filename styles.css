@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Segoe UI Emoji, Arial;
+    margin: 0
+}
+
+body {
+    background: #f7fafc;
+    color: #0f172a;
+    padding: 24px
+}
+
+.app {
+    max-width: 900px;
+    margin: 0 auto
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 12px
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+.controls label {
+    font-size: 0.9rem
+}
+
+.controls .voice-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls input[type="url"] {
+    flex: 1;
+    min-width: 220px;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px
+}
+
+.controls button {
+    padding: 8px 12px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+.controls select,
+input[type=range] {
+    padding: 6px
+}
+
+.status {
+    margin: 8px 0;
+    color: #334155
+}
+
+.words-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px
+}
+
+.word {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none
+}
+
+.word:focus {
+    outline: 3px solid #93c5fd
+}
+
+footer {
+    margin-top: 12px;
+    color: #475569
+}
+
+@media (max-width:480px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .controls input[type="url"] {
+        min-width: 0
+    }
+}
